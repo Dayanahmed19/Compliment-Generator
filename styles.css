@@ -1,0 +1,63 @@
+/* Global Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-size: 400% 400%; /* Background size */
+    animation: gradientAnimation 12s ease infinite; /* Gradient animation */
+}
+
+/* Container Styles */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Added depth with shadow */
+    backdrop-filter: blur(8px); /* Blur effect for a frosted glass look */
+    width: 90%;
+    max-width: 600px; /* Keeps the layout responsive */
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #FFFFFF; /* White for contrast */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Compliment Text Styles */
+#compliment {
+    font-size: 1.5rem;
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Light background for text area */
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out */
+}
+
+/* Button Styles */
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover and active states */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge button */
+}
+
+button:active {
+    transform: scale(0.95); /* Shrink button on click */
+}
