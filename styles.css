@@ -61,3 +61,50 @@ button:hover {
 button:active {
     transform: scale(0.95); /* Shrink button on click */
 }
+/* Positioning the text at the bottom-right corner */
+.made-by {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px; /* Smaller font size for a subtle effect */
+    font-weight: 100; /* Thinner font weight for a more delicate appearance */
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white for watermark effect */
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.8), 0 0 16px rgba(255, 0, 127, 0.8); /* Soft glowing effect */
+    animation: fadeInGlow 4s ease-out infinite, moveText 5s ease-out infinite; /* Animations */
+    opacity: 0.7; /* Transparency for a watermark look */
+}
+
+/* Glowing and fading effect */
+@keyframes fadeInGlow {
+    0% {
+        opacity: 0;
+        text-shadow: 0 0 8px rgba(255, 0, 127, 0.8), 0 0 16px rgba(255, 0, 127, 0.8);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 0, 127, 0.8), 0 0 20px rgba(255, 0, 127, 0.8);
+    }
+    100% {
+        opacity: 0;
+        text-shadow: 0 0 8px rgba(255, 0, 127, 0.8), 0 0 16px rgba(255, 0, 127, 0.8);
+    }
+}
+
+/* Adding some movement to the text for better attention */
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px) translateY(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.made-by p:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    color: rgba(255, 0, 127, 1); /* Color change on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
